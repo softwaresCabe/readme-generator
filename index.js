@@ -1,16 +1,85 @@
-// array of questions for user
-const questions = [
+const inquirer = require("inquirer");
+const fs = require("fs");
+const util = require("util");
 
-];
+const writeFileAsync = util.promisify(fs.writeFile);
 
-// function to write README file
-function writeToFile(fileName, data) {
+
+
+async function init() {
+
+  try {
+    const answers = await promptUser();
+
+    const md = generateMD(answers);
+
+    await writeFileAsync("README.md", md);
+
+    console.log("Successfully wrote README.md file");
+  } catch(err) {
+    console.log(err);
+  }
 }
 
-// function to initialize program
-function init() {
-
+function promptUser() {
+  return inquirer.prompt([
+    {
+      type: "input",
+      name: "title",
+      message: "What is the title of this project?"
+    },
+    {
+      type: "input",
+      name: "description",
+      message: "Enter the description"
+    },
+    {
+      type: "input",
+      name: "installInstructions",
+      message: "Enter the install instructions"
+    },
+    {
+      type: "input",
+      name: "usageInfo",
+      message: "Enter usage information"
+    },
+    {
+      type: "input",
+      name: "contributionsGuidelines",
+      message: "Enter contributions guidelines"
+    },
+    {
+      type: "input",
+      name: "testInstructions",
+      message: "Enter test instructions"
+    }
+  ]);
 }
 
-// function call to initialize program
+function generateMD(answers) {
+  return `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Hi! My name is ${answers.name}</h1>
+    <p class="lead">I am from ${answers.location}.</p>
+    <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
+    <ul class="list-group">
+      <li class="list-group-item">My GitHub username is ${answers.github}</li>
+      <li class="list-group-item">LinkedIn: ${answers.linkedin}</li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>`;
+}
+
 init();
