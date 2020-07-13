@@ -62,11 +62,6 @@ function promptUser() {
     },
     {
       type: "input",
-      name: "contributionInstructions",
-      message: "Enter contribution instructions",
-    },
-    {
-      type: "input",
       name: "githubUsername",
       message: "Enter github user name",
     },
@@ -110,11 +105,11 @@ generateMD = answers => {
 
   ## Contributing Guldlines
 
-  ${answers.contributionInstructions}
+  ${answers.contributionsGuidelines}
 
   ## Test Instructions
 
-  ${answers.installInstructions}
+  ${answers.testInstructions}
 
   ## Questions
   
