@@ -58,7 +58,7 @@ function promptUser() {
       type: "list",
       name: "licenseChoice",
       message: "Choose the type of license",
-      choices: ["Apache License 2.0", "BSD 3-Clause", "BSD 2-Clause", "MIT license"]
+      choices: ["Apache License 2.0", "BSD 2-Clause", "BSD 3-Clause", "MIT license"]
     },
     {
       type: "input",
@@ -89,6 +89,13 @@ function generateMD(answers) {
 
 
   ## Table of Contents
+
+  1. [Installation](#Installation)
+  2. Usage
+  3. License
+  4. Contributing
+  5. Tests
+  6. Questions
 
 
   ## Installation
