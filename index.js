@@ -80,38 +80,38 @@ function promptUser() {
 
 function generateMD(answers) {
   return `
-    ## ${answers.title}
+  ## ${answers.title}
 
     ${answers.description}
 
 
-    ## Table of Contents
+  ## Table of Contents
 
 
-    ## Installation
-
-    ${answers.installInstructions}
-
-    ## Usage
-
-    ${answers.usageInfo}
-
-    ## License
-
-    ${answers.licenseChoice}
-
-    ## Contributing Guldlines
-
-    ${answers.contributionInstructions}
-
-    ## Test Instructions
+  ## Installation
 
     ${answers.installInstructions}
 
-    ## Questions
+  ## Usage
 
-    ${answers.githubUsername}
-    ${answers.email}
+  ${answers.usageInfo}
+
+  ## License
+
+  ${answers.licenseChoice}
+
+  ## Contributing Guldlines
+
+  ${answers.contributionInstructions}
+
+  ## Test Instructions
+
+  ${answers.installInstructions}
+
+  ## Questions
+
+  ${answers.githubUsername}
+  ${answers.email}
 
   `;
 }
