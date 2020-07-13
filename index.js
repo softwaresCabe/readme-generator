@@ -91,11 +91,11 @@ function generateMD(answers) {
   ## Table of Contents
 
   1. [Installation](#Installation)
-  2. Usage
-  3. License
-  4. Contributing
-  5. Tests
-  6. Questions
+  2. [Usage](#Usage)
+  3. [License](#Liscense)
+  4. [Contributing Guldlines](#Contributing Guldlines)
+  5. [Test Instructions](#Test Instructions)
+  6. [Questions](#Questions)
 
 
   ## Installation
