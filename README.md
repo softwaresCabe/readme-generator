@@ -1,10 +1,8 @@
 
-  ## asa
-  [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+  ## aaa
+  [![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)
 
-  asas
-
-
+  aaa
 
   ## Table of Contents
 
@@ -18,27 +16,27 @@
 
   ## Installation
 
-  asas
+  aaa
 
   ## Usage
 
-  asas
+  aaa
 
   ## License
 
-  Apache License 2.0
+  BSD 2-Clause
 
   ## Contributing Guldlines
 
-  asa
+  aaaa
 
   ## Test Instructions
 
-  asas
+  aaa
 
   ## Questions
-
-  asas
-  asa
+  
+  [GitHub](https://github.com/softwarescabe)
+  nivek2696@gmail.com
 
   
