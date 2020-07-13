@@ -78,15 +78,13 @@ function promptUser() {
   ]);
 }
 
-function generateMD(answers) {
+generateMD = answers => {
   var badge = assignBadge(answers.licenseChoice);
   return `
   ## ${answers.title}
   ${badge}
 
   ${answers.description}
-
-
 
   ## Table of Contents
 
@@ -119,15 +117,15 @@ function generateMD(answers) {
   ${answers.installInstructions}
 
   ## Questions
-
-  ${answers.githubUsername}
+  
+  [GitHub](https://github.com/${answers.githubUsername})
   ${answers.email}
 
   `;
 }
 
 
-function assignBadge(choice){
+assignBadge = choice => {
 
   if(choice === "Apache License 2.0"){
     return "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
