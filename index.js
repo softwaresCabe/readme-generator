@@ -79,10 +79,13 @@ function promptUser() {
 }
 
 function generateMD(answers) {
+  var badge = assignBadge(answers.licenseChoice);
   return `
   ## ${answers.title}
-  
+  ${badge}
+
   ${answers.description}
+
 
 
   ## Table of Contents
@@ -114,6 +117,24 @@ function generateMD(answers) {
   ${answers.email}
 
   `;
+}
+
+
+function assignBadge(choice){
+
+  if(choice === "Apache License 2.0"){
+    return "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+  }
+  else if (choice === "BSD 3-Clause"){
+    return "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)";
+  }
+  else if (choice === "BSD 2-Clause"){
+    return "[![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)";
+  }
+  else {
+    return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+  }
+
 }
 
 init();
