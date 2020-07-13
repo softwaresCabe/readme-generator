@@ -81,8 +81,8 @@ function promptUser() {
 function generateMD(answers) {
   return `
   ## ${answers.title}
-
-    ${answers.description}
+  
+  ${answers.description}
 
 
   ## Table of Contents
@@ -90,7 +90,7 @@ function generateMD(answers) {
 
   ## Installation
 
-    ${answers.installInstructions}
+  ${answers.installInstructions}
 
   ## Usage
 
