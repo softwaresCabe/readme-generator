@@ -93,8 +93,8 @@ function generateMD(answers) {
   1. [Installation](#Installation)
   2. [Usage](#Usage)
   3. [License](#Liscense)
-  4. [Contributing Guldlines](#Contributing Guldlines)
-  5. [Test Instructions](#Test Instructions)
+  4. [Contributing Guldlines](#Contributing-Guldlines)
+  5. [Test Instructions](#Test-Instructions)
   6. [Questions](#Questions)
 
 
